@@ -1,0 +1,9 @@
+<div class="carousel">
+  <div class="slides" [style.transform]="'translateX(' + (-currentIndex * slideWidth) + 'px)'">
+    <div class="slide" *ngFor="let image of images; let i = index" [style.width.px]="slideWidth">
+      <img [src]="image" alt="Slide {{i+1}}">
+    </div>
+  </div>
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>

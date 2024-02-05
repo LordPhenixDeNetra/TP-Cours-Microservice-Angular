@@ -1,0 +1,66 @@
+.ajouter-commande-btn{
+  /*margin-top : 6px;*/
+  margin-bottom : 6px;
+
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+
+  border: solid 1px;
+  border-radius: 8px;
+  margin-top: 4px;
+  margin-right: 6px;
+}
+
+table {
+  width: 100%;
+  margin-top: 12px;
+  margin-right: 12px;
+  border-radius: 8px;
+
+}
+
+.mat-elevation-z13 {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Style de l'en-tête de la table */
+.mat-header-cell {
+  font-weight: bold;
+  text-transform: capitalize; /* Met en majuscule la première lettre de chaque mot */
+}
+
+/* Style des cellules de la table */
+.mat-cell {
+  padding: 12px;
+}
+
+/* Style des boutons d'édition et de suppression */
+.mat-icon {
+  cursor: pointer;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.mat-icon:hover {
+  opacity: 0.7;
+}
+
+/* Ajouter une marge entre les icônes */
+.mat-icon + .mat-icon {
+  margin-left: 12px;
+}
+
+/* Style des boutons d'édition et de suppression */
+.mat-icon.edit-icon {
+  color: #2196f3; /* Couleur bleue */
+}
+
+.mat-icon.delete-icon {
+  color: #f44336; /* Couleur rouge */
+}
+

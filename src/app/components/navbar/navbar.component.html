@@ -1,0 +1,25 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list class="vertical-nav">
+      <a  mat-list-item  routerLink="/">Accueil</a>
+      <a mat-list-item routerLink="/customers">Clients</a>
+      <a mat-list-item routerLink="/restaurants">Restaurants</a>
+      <a mat-list-item routerLink="/orders">Commandes</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="n-tool-bar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>M1 SIR Restaurant</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

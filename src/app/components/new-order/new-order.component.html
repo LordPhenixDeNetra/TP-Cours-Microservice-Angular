@@ -1,0 +1,39 @@
+<button mat-raised-button class="ajouter-commande-btn" (click)="handleCancel()" color="accent">Annuler et retourner</button>
+
+<form class="form-container" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <!-- Nom -->
+  <mat-form-field appearance="outline">
+    <mat-label>Nom</mat-label>
+    <input matInput formControlName="name" placeholder="Entrez votre nom">
+    <mat-error *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">Le nom est requis</mat-error>
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Entrez votre email" type="email">
+    <mat-error *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">Email invalide</mat-error>
+  </mat-form-field>
+
+  <!-- Mot de passe -->
+  <mat-form-field appearance="outline">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput formControlName="password" placeholder="Entrez votre mot de passe" type="password">
+    <mat-error *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">Le mot de passe est requis</mat-error>
+  </mat-form-field>
+
+  <!-- Confirmation du mot de passe -->
+  <mat-form-field appearance="outline">
+    <mat-label>Confirmation du mot de passe</mat-label>
+    <input matInput formControlName="confirmPassword" placeholder="Confirmez votre mot de passe" type="password">
+    <mat-error *ngIf="myForm.get('confirmPassword')?.invalid && myForm.get('confirmPassword')?.touched">Les mots de passe ne correspondent pas</mat-error>
+  </mat-form-field>
+  <!-- Bouton Soumettre -->
+  <div class="form-btn">
+    <button class="btn-add" mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">Soumettre</button>
+    <button mat-raised-button class="ajouter-commande-btn" (click)="handleCancel()" color="accent">Annuler et retourner</button>
+  </div>
+
+</form>
+
+

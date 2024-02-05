@@ -1,0 +1,40 @@
+<button mat-raised-button class="ajouter-commande-btn" (click)="handleCancel()" color="accent">Annuler et retourner</button>
+
+<form class="form-container" [formGroup]="myForm" >
+  <!-- Nom -->
+  <mat-form-field appearance="outline">
+    <mat-label>Nom</mat-label>
+    <input matInput formControlName="name" placeholder="Entrez le nom">
+    <mat-error *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">Le nom est requis</mat-error>
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Entrez votre email" type="email">
+    <mat-error *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">Email invalide</mat-error>
+  </mat-form-field>
+
+  <!-- Mot de passe -->
+  <mat-form-field appearance="outline">
+    <mat-label>Téléphone</mat-label>
+    <input matInput formControlName="phoneNumber" placeholder="Entrez le numero de téléphone" type="phone">
+    <mat-error *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">Le téléphone de passe est requis</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Adresse</mat-label>
+    <input matInput formControlName="address" placeholder="Entrez l'adresse" type="text">
+    <mat-error *ngIf="myForm.get('address')?.invalid && myForm.get('address')?.touched">L'adresse' est requis</mat-error>
+  </mat-form-field>
+
+
+
+  <!-- Bouton Soumettre -->
+  <div class="form-btn">
+    <button class="btn-add" mat-raised-button color="primary" (click)="handleAddCustomer()" type="submit" [disabled]="myForm.invalid">Soumettre</button>
+    <button mat-raised-button class="ajouter-commande-btn" (click)="handleCancel()" color="accent">Annuler et retourner</button>
+  </div>
+
+</form>
+

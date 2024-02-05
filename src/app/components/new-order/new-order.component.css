@@ -1,0 +1,38 @@
+form{
+  margin: 0 auto;
+}
+
+.form-container {
+  max-width: 400px;
+
+  padding: 18px 8px 18px 8px;
+  margin-top: 14px;
+
+  border: solid 1px;
+  border-radius: 12px;
+
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 16px;
+  margin-right: 22px;
+}
+
+
+
+/*button {*/
+/*  margin-top: 16px;*/
+/*}*/
+
+.btn-add{
+  /*margin-top: 16px;*/
+}
+
+.form-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+

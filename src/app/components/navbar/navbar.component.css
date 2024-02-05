@@ -1,0 +1,13 @@
+/* styles.css (ou votre fichier de styles global) */
+.n-tool-bar{
+  margin-bottom: 8px;
+}
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-list-item {
+  width: 100%;
+  text-align: center;
+}
